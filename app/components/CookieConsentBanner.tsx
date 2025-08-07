@@ -57,6 +57,7 @@ export default function CookieConsentBanner() {
       </span>
       <button
         onClick={handleAccept}
+        aria-label="Aceptar cookies"
         style={{
           margin: '0 0.5rem',
           padding: '0.5rem 1.1rem',

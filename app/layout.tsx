@@ -69,13 +69,6 @@ export const metadata: Metadata = {
       'es': 'https://calculadoraciclosdesueno.com/',
       'en': 'https://mysleepcalculator.net/',
     },
-<<<<<<< HEAD
-  },
-
-  other: {
-    inLanguage: 'es',
-=======
->>>>>>> b73f168 (Multiple Language)
   },
 };
 
@@ -96,21 +89,12 @@ export default function RootLayout({
         {/* Favicon link */}
         <link rel="icon" href="/favicon.ico" />
 
-<<<<<<< HEAD
-        {/* Hreflang versions */}
-        <link rel="alternate" href="https://calculadoraciclosdesueno.com/" hreflang="es" />
-        <link rel="alternate" href="https://mysleepcalculator.net/" hreflang="en" />
-
-        {/* Hreflang Default */}
-        <link rel="alternate" href="https://mysleepcalculator.net/" hreflang="x-default" />
-=======
         {/* hrefLang versions */}
         <link rel="alternate" href="https://calculadoraciclosdesueno.com/" hrefLang="es" />
         <link rel="alternate" href="https://mysleepcalculator.net/" hrefLang="en" />
 
         {/* hrefLang Default */}
         <link rel="alternate" href="https://mysleepcalculator.net/" hrefLang="x-default" />
->>>>>>> b73f168 (Multiple Language)
 
         {/* Schema.org structured data for SEO */}
         <Script id="jsonld-webpage" type="application/ld+json">
@@ -118,11 +102,7 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Calculadora de Sueño",
-<<<<<<< HEAD
-            "alternateName": "Sleep Cycle Calculator",
-=======
             "alternateName": "Sleep Calculator",
->>>>>>> b73f168 (Multiple Language)
             "url": "https://calculadoraciclosdesueno.com",
             "alternateUrl": "https://mysleepcalculator.net",
             "description": "Usa nuestra Calculadora de Ciclos de Sueño para saber a qué hora dormir y despertar.",
@@ -138,11 +118,7 @@ export default function RootLayout({
             "name": "Calculadora de Sueño",
             "url": "https://calculadoraciclosdesueno.com",
             "logo": "https://calculadoraciclosdesueno.com/logo.png",
-<<<<<<< HEAD
-            "alternateName": "Sleep Cycle Calculator",
-=======
             "alternateName": "Sleep Calculator",
->>>>>>> b73f168 (Multiple Language)
             "sameAs": [
               "https://calculadoraciclosdesueno.com",
               "https://mysleepcalculator.net"

@@ -25,11 +25,7 @@ const getSiteLangFromHost = (host: string): string => {
 export default function LanguagePrompt() {
   const pathname = usePathname();
   const [showPrompt, setShowPrompt] = useState(false);
-<<<<<<< HEAD
-  const [userLang, setUserLang] = useState('en');
-=======
   const [userLang, setUserLang] = useState<'en' | 'es'>('en');
->>>>>>> b73f168 (Multiple Language)
 
   useEffect(() => {
     const siteLang = getSiteLangFromHost(window.location.hostname);
@@ -61,14 +57,6 @@ export default function LanguagePrompt() {
   if (!showPrompt) return null;
 
   const messages = {
-<<<<<<< HEAD
-    en: 'Choose your preferred language:',
-    es: 'Elige tu idioma preferido:',
-  };
-
-  return (
-    <div className={styles.overlay}>
-=======
     en: {
       title: 'Choose your preferred language:',
       closeLabel: 'Close language selector',
@@ -85,17 +73,12 @@ export default function LanguagePrompt() {
 
   return (
     <div className={styles.overlay} role="dialog" aria-modal="true" aria-label={title}>
->>>>>>> b73f168 (Multiple Language)
       <div className={styles.popup}>
         <div
           className={styles.closeIcon}
           onClick={dismissPrompt}
           role="button"
-<<<<<<< HEAD
-          aria-label="Cerrar el selector de idioma"
-=======
           aria-label={closeLabel}
->>>>>>> b73f168 (Multiple Language)
           tabIndex={0}
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') dismissPrompt();
@@ -103,24 +86,14 @@ export default function LanguagePrompt() {
         >
           &times;
         </div>
-<<<<<<< HEAD
-        <p className={styles.title}>
-          {messages[userLang as keyof typeof messages] || messages.en}
-        </p>
-=======
         <p className={styles.title}>{title}</p>
->>>>>>> b73f168 (Multiple Language)
         <div className={styles.langButtons}>
           {LANGUAGES.map(lang => (
             <button
               key={lang.code}
               onClick={() => handleSelect(lang.code)}
               className={styles.langButton}
-<<<<<<< HEAD
-              aria-label={`Cambiar a ${lang.label}`}
-=======
               aria-label={buttonLabel(lang.label)}
->>>>>>> b73f168 (Multiple Language)
             >
               {lang.label}
             </button>

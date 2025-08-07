@@ -29,11 +29,7 @@ export default function WidgetPage() {
           maxWidth: '410px', // ⬅️ Match the width in the embed code
         }}
       >
-<<<<<<< HEAD
-        <WidgetClient />
-=======
         <SleepCalculator/>
->>>>>>> b73f168 (Multiple Language)
       </div>
     </div>
   );

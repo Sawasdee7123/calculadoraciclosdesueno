@@ -82,12 +82,9 @@ export default function LanguageSwitcher() {
       <button
         className={styles.langButton}
         onClick={() => setIsOpen(prev => !prev)}
-<<<<<<< HEAD
-=======
         aria-haspopup="listbox"
         aria-expanded={isOpen}
         aria-label={`Cambiar idioma actual (${currentLangData.name})`}
->>>>>>> b73f168 (Multiple Language)
       >
         <img
           src={currentLangData.flag}
@@ -101,20 +98,13 @@ export default function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-<<<<<<< HEAD
-        <ul className={styles.dropdown}>
-=======
         <ul className={styles.dropdown} role="listbox" aria-label="Selector de idioma">
->>>>>>> b73f168 (Multiple Language)
           {LANGUAGES.map(lang => (
             <li
               key={lang.code}
               className={styles.dropdownItem}
-<<<<<<< HEAD
-=======
               role="option"
               aria-selected={lang.code === currentLang}
->>>>>>> b73f168 (Multiple Language)
               onClick={() => {
                 setIsOpen(false);
                 handleSelect(lang.code);

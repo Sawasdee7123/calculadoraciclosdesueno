@@ -104,7 +104,6 @@ export default function RootLayout({
             "name": "Calculadora de Sueño",
             "alternateName": "Sleep Calculator",
             "url": "https://calculadoraciclosdesueno.com",
-            "alternateUrl": "https://mysleepcalculator.net",
             "description": "Usa nuestra Calculadora de Ciclos de Sueño para saber a qué hora dormir y despertar.",
             "image": "https://calculadoraciclosdesueno.com/og-image.png",
             "inLanguage": "es"

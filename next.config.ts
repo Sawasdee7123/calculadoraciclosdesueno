@@ -1,19 +1,34 @@
 // next.config.ts
 
 import type { NextConfig } from "next";
-import withBundleAnalyzer from '@next/bundle-analyzer';
+import withBundleAnalyzer from "@next/bundle-analyzer";
 
 // Enable analyzer only when ANALYZE=true
 const withAnalyzer = withBundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
+  enabled: process.env.ANALYZE === "true",
 });
 
-// Your existing Next.js config options
+// Next.js config
 const nextConfig: NextConfig = {
-  // Add any existing or future config here
-  // Example:
-  // reactStrictMode: true,
-  // swcMinify: true,
+  async redirects() {
+    return [
+      // Force non‑www canonical
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.calculadoraciclosdesueno.com" }],
+        destination: "https://calculadoraciclosdesueno.com/:path*",
+        permanent: true,
+      },
+      // Collapse /index to /
+      {
+        source: "/index",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
+  // Do NOT enable trailingSlash to avoid / vs / duplicates
+  // trailingSlash: false, // (default)
 };
 
 export default withAnalyzer(nextConfig);

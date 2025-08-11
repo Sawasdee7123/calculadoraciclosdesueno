@@ -1,11 +1,14 @@
 // Import the main content component for the Privacy Policy page
 import PrivacyContent from './PrivacyContent';
 
+import { alternatesForEsPath } from '../components/hreflang';
+
 // Import Metadata type from Next.js for static site metadata
 import type { Metadata } from 'next';
 
 // Static metadata for SEO, Open Graph, Twitter Card, and canonical URL for the Privacy Policy page
 export const metadata: Metadata = {
+  alternates: alternatesForEsPath('/privacidad'),
   title: 'Política de Privacidad | Calculadora de Sueño',
   description: 'Lee la política de privacidad de Calculadora de Sueño para conocer cómo protegemos tus datos personales y tu información mientras usas nuestra herramienta gratuita.',
 
@@ -30,14 +33,6 @@ export const metadata: Metadata = {
     title: 'Política de Privacidad | Calculadora de Sueño',
     description: 'Lee la política de privacidad de Calculadora de Sueño para conocer cómo protegemos tus datos personales y tu información mientras usas nuestra herramienta gratuita.',
     images: ['https://calculadoraciclosdesueno.com/og-image.png'],
-  },
-
-  alternates: {
-    canonical: 'https://calculadoraciclosdesueno.com/privacidad',
-    languages: {
-      es: 'https://calculadoraciclosdesueno.com/privacidad',
-      en: 'https://mysleepcalculator.net/privacy-policy',
-    },
   },
 };
 

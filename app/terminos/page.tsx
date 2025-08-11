@@ -1,9 +1,14 @@
 // Import the main content component for the Terms & Conditions page
 import TermsContent from './TermsContent';
+
+import { alternatesForEsPath } from '../components/hreflang';
+
+// Import Metadata type from Next.js for static site metadata
 import type { Metadata } from 'next';
 
 // Static metadata for SEO, Open Graph, Twitter Card, and canonical URL for the Terms page
 export const metadata: Metadata = {
+  alternates: alternatesForEsPath('/terminos'),
   title: 'Términos y Condiciones | Calculadora de Sueño',
   description: 'Lee los términos y condiciones de uso de la Calculadora de Sueño. Conoce tus derechos, responsabilidades y las condiciones para utilizar nuestra herramienta gratuita.',
 
@@ -28,14 +33,6 @@ export const metadata: Metadata = {
     title: 'Términos y Condiciones | Calculadora de Sueño',
     description: 'Lee los términos y condiciones de uso de la Calculadora de Sueño. Conoce tus derechos, responsabilidades y las condiciones para utilizar nuestra herramienta gratuita.',
     images: ['https://calculadoraciclosdesueno.com/og-image.png'],
-  },
-
-  alternates: {
-    canonical: 'https://calculadoraciclosdesueno.com/terminos',
-    languages: {
-      es: 'https://calculadoraciclosdesueno.com/terminos',
-      en: 'https://mysleepcalculator.net/terms-and-conditions',
-    },
   },
 };
 

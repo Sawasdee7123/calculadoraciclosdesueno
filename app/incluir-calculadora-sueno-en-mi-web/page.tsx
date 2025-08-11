@@ -1,8 +1,14 @@
 // Import the CalculatorInstructions component, which renders the embed instructions and FAQ
 import CalculatorInstructions from './CalculatorInstructions';
 
+import { alternatesForEsPath } from '../components/hreflang';
+
+// Import Metadata type from Next.js for static site metadata
+import type { Metadata } from 'next';
+
 // Static metadata for SEO, Open Graph, Twitter Card, and canonical link
 export const metadata = {
+  alternates: alternatesForEsPath('/incluir-calculadora-sueno-en-mi-web'),
   title: 'Cómo añadir la Calculadora de Sueño a tu página web',
   description: 'Instrucciones rápidas y sencillas para incluir la Calculadora de Ciclos de Sueño gratis en tu web o blog mediante un simple código.',
 
@@ -27,14 +33,6 @@ export const metadata = {
     title: 'Cómo añadir la Calculadora de Sueño a tu página web',
     description: 'Instrucciones rápidas y sencillas para incluir la Calculadora de Ciclos de Sueño gratis en tu web o blog mediante un simple código.',
     images: ['https://calculadoraciclosdesueno.com/og-image.png'],
-  },
-
-  alternates: {
-    canonical: 'https://calculadoraciclosdesueno.com/incluir-calculadora-sueno-en-mi-web',
-    languages: {
-      es: 'https://calculadoraciclosdesueno.com/incluir-calculadora-sueno-en-mi-web',
-      en: 'https://mysleepcalculator.net/embed-sleep-calculator',
-    },
   },
 };
 

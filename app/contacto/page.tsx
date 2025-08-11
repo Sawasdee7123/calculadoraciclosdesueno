@@ -1,11 +1,14 @@
 // Import the main content component for the Contact page
 import ContactContent from './ContactContent';
 
+import { alternatesForEsPath } from '../components/hreflang';
+
 // Import Metadata type from Next.js for static site metadata
 import type { Metadata } from 'next';
 
 // Static metadata for SEO, Open Graph, Twitter Card, and canonical URL for the Learn page
 export const metadata: Metadata = {
+  alternates: alternatesForEsPath('/contacto'),
   title: 'Contacta con Nosotros | Calculadora de Sueño',
   description: '¿Tienes preguntas o sugerencias? Ponte en contacto con el equipo de Calculadora de Sueño.',
 
@@ -30,14 +33,6 @@ export const metadata: Metadata = {
     title: 'Contacta con Nosotros | Calculadora de Sueño',
     description: '¿Tienes preguntas o sugerencias? Ponte en contacto con el equipo de Calculadora de Sueño.',
     images: ['https://calculadoraciclosdesueno.com/og-image.png'],
-  },
-
-  alternates: {
-    canonical: 'https://calculadoraciclosdesueno.com/contacto',
-    languages: {
-      es: 'https://calculadoraciclosdesueno.com/contacto',
-      en: 'https://mysleepcalculator.net/contact',
-    },
   },
 };
 

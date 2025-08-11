@@ -8,7 +8,6 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 // Main app-level layout wrappers
 import AppBody from './AppBody';
-import Header from './components/Header';
 import LayoutShell from './components/LayoutShell';
 
 import LanguagePrompt from './components/LanguagePrompt';
@@ -29,6 +28,7 @@ const playfair = Playfair_Display({
 
 // Static metadata for SEO and browser tab
 export const metadata: Metadata = {
+  metadataBase: new URL('https://calculadoraciclosdesueno.com'),
   title: 'Calculadora de Sueño | Descubre tu Hora Ideal para Dormir y Despertar',
   description: 'Usa nuestra Calculadora de Ciclos de Sueño para saber a qué hora dormir y despertar. Mejora tu descanso y bienestar con horarios de sueño personalizados.',
   icons: {
@@ -63,13 +63,8 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
   },
 
-  alternates: {
-    canonical: 'https://calculadoraciclosdesueno.com/',
-    languages: {
-      'es': 'https://calculadoraciclosdesueno.com/',
-      'en': 'https://mysleepcalculator.net/',
-    },
-  },
+  // IMPORTANT: no "alternates" here; each page sets its own
+
 };
 
 /**
@@ -88,13 +83,6 @@ export default function RootLayout({
       <head>
         {/* Favicon link */}
         <link rel="icon" href="/favicon.ico" />
-
-        {/* hrefLang versions */}
-        <link rel="alternate" href="https://calculadoraciclosdesueno.com/" hrefLang="es" />
-        <link rel="alternate" href="https://mysleepcalculator.net/" hrefLang="en" />
-
-        {/* hrefLang Default */}
-        <link rel="alternate" href="https://mysleepcalculator.net/" hrefLang="x-default" />
 
         {/* Schema.org structured data for SEO */}
         <Script id="jsonld-webpage" type="application/ld+json">

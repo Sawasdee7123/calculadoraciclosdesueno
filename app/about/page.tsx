@@ -1,14 +1,14 @@
 // Import the main content component for the Learn page
 import AboutContent from './AboutContent';
 
-import { alternatesForEsPath } from '../components/hreflang';
+import { alternatesForESPath } from '../components/hreflang';
 
 // Import Metadata type from Next.js for static site metadata
 import type { Metadata } from 'next';
 
 // Static metadata for SEO, Open Graph, Twitter Card, and canonical URL for the Learn page
 export const metadata: Metadata = {
-  alternates: alternatesForEsPath('/about'),
+  alternates: alternatesForESPath('/about'),
   title: 'Sobre Nosotros | Calculadora de Sueño',
   description: 'Conoce al equipo detrás de la Calculadora de Sueño. Descubre por qué creamos esta herramienta gratuita y cómo puede ayudarte a mejorar tu descanso.',
 

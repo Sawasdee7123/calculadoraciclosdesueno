@@ -56,6 +56,13 @@ export default function PrivacyContent() {
           No solicitamos ni almacenamos información personal identificable. Sin embargo, como la mayoría de sitios web, podemos recopilar datos anónimos como tu dirección IP, tipo de navegador, idioma y las páginas que visitas, únicamente para fines estadísticos y de mejora del servicio.
         </p>
 
+        <p>
+          <strong>Extensión de Chrome:</strong> Al utilizar nuestra extensión oficial de la Calculadora de Sueño,
+          no se recopilan, almacenan ni transmiten datos personales o identificables. La extensión únicamente carga
+          la interfaz de la calculadora desde nuestros sitios web oficiales y puede guardar localmente en el navegador
+          una preferencia de idioma no personal para tu comodidad. Estos datos nunca salen de tu dispositivo.
+        </p>
+
         <h2>2. Cookies y Tecnologías Similares</h2>
         <p>
           Utilizamos cookies propias y de terceros (por ejemplo, Google Analytics, Google AdSense) para analizar el tráfico, mostrar publicidad personalizada y mejorar tu experiencia de usuario.

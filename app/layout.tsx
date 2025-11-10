@@ -84,6 +84,13 @@ export default function RootLayout({
         {/* Favicon link */}
         <link rel="icon" href="/favicon.ico" />
 
+        {/* Google AdSense verification (static script tag for crawler) */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9308769554508651"
+          crossOrigin="anonymous"
+        ></script>
+
         {/* Schema.org structured data for SEO */}
         <Script id="jsonld-webpage" type="application/ld+json">
           {JSON.stringify({
